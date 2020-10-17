@@ -7,7 +7,8 @@
     <tittle>Autor</titlle>
 </head>
 <body>
-    <form action = "">
+    <form action="{{ route('registrar_autor') }}" method = "POST">
+        @csrf
         <label for = "">Nome</label><br />
         <input type = "text" name = "nome"><br />
 
@@ -18,7 +19,7 @@
         <input type = "text" name = "sexo"><br />
 
         <label for = "">Nacionalidade</label><br />
-        <input type = "text" name = "nacionalidade">
+        <input type = "text" name = "nacionalidade"><br />
 
         <button>SALVAR</button>
     </form>
