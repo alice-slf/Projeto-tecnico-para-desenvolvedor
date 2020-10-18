@@ -26,3 +26,6 @@ Route::post('/generos', 'GenerosController@store')->name('registrar_genero');
 Route::get('/autores', 'AutoresController@create');
 Route::post('/autores', 'AutoresController@store')->name('registrar_autor');
 
+Route::get('/livros', 'LivrosController@create');
+Route::post('/livros', 'LivrosController@store')->name('registrar_livro');
+
