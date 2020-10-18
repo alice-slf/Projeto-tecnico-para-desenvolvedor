@@ -17,3 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/editoras', 'EditorasController@create');
+Route::post('/editoras', 'EditorasController@store')->name('registrar_editora');
+
