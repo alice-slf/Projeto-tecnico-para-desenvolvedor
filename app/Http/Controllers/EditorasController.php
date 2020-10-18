@@ -42,4 +42,18 @@ class EditorasController extends Controller
 
         return "Editora Alterada com Sucesso!";
     }
+
+    public function delete($id)
+    {
+        $editora = Editora::findOrFail($id);
+        return view('editoras.delete', ['editora' => $editora]);
+    }
+
+    public function destroy($id)
+    {
+        $editora = Editora::findOrFail($id);
+        $editora->delete();
+
+        return "Editora deletada com Sucesso!";
+    }
 }

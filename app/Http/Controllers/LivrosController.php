@@ -50,4 +50,18 @@ class LivrosController extends Controller
 
         return "Livro Alterado com Sucesso!";
     }
+
+    public function delete($id)
+    {
+        $livro = Livro::findOrFail($id);
+        return view('livros.delete', ['livro' => $livro]);
+    }
+
+    public function destroy($id)
+    {
+        $livro = Livro::findOrFail($id);
+        $livro->delete();
+
+        return "Livro Deletado com Sucesso!";
+    }
 }

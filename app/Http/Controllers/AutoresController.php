@@ -50,4 +50,18 @@ class AutoresController extends Controller
         return "Autor Alterado com Sucesso!";
     }
 
+    public function delete($id)
+    {
+        $autor = Autor::findOrFail($id);
+        return view('autores.delete', ['autor' => $autor]);
+    }
+
+    public function destroy($id)
+    {
+        $autor = Autor::findOrFail($id);
+        $autor->delete();
+
+        return "Autor Deletado com Sucesso!";
+    }
+
 }

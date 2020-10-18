@@ -42,4 +42,18 @@ class GenerosController extends Controller
 
         return "Genero Alterado com Sucesso!";
     }
+
+    public function delete($id)
+    {
+        $genero = Genero::findOrFail($id);
+        return view('generos.delete', ['genero' => $genero]);
+    }
+
+    public function destroy($id)
+    {
+        $genero = Genero::findOrFail($id);
+        $genero->delete();
+
+        return "Genero deletado com Sucesso!";
+    }
 }
