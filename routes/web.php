@@ -17,15 +17,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/editoras', 'EditorasController@create');
-Route::post('/editoras', 'EditorasController@store')->name('registrar_editora');
+Route::get('/editoras/cadastro', 'EditorasController@create');
+Route::post('/editoras/cadastro', 'EditorasController@store')->name('registrar_editora');
+Route::get('/editoras/ver/{id}', 'EditorasController@show');
 
-Route::get('/generos', 'GenerosController@create');
-Route::post('/generos', 'GenerosController@store')->name('registrar_genero');
+Route::get('/generos/cadastro', 'GenerosController@create');
+Route::post('/generos/cadastro', 'GenerosController@store')->name('registrar_genero');
+Route::get('/generos/ver/{id}', 'GenerosController@show');
 
-Route::get('/autores', 'AutoresController@create');
-Route::post('/autores', 'AutoresController@store')->name('registrar_autor');
+Route::get('/autores/cadastro', 'AutoresController@create');
+Route::post('/autores/cadastro', 'AutoresController@store')->name('registrar_autor');
+Route::get('/autores/ver/{id}', 'AutoresController@show');
 
-Route::get('/livros', 'LivrosController@create');
-Route::post('/livros', 'LivrosController@store')->name('registrar_livro');
+Route::get('/livros/cadastro', 'LivrosController@create');
+Route::post('/livros/cadastro', 'LivrosController@store')->name('registrar_livro');
+Route::get('/livros/ver/{id}', 'LivrosController@show');
 

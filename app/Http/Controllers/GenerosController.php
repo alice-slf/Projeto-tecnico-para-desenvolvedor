@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Genero;
 
 class GenerosController extends Controller
 {
@@ -18,5 +19,11 @@ class GenerosController extends Controller
         ]);
 
         return "Genero Inserido com Sucesso!";
+    }
+
+    public function show($id)
+    {
+        $genero = Genero::findOrFail($id);
+        return view('generos.show', ['genero' => $genero]);
     }
 }

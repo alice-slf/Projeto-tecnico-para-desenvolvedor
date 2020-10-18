@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Autor;
 
 class AutoresController extends Controller
 {
@@ -21,5 +22,11 @@ class AutoresController extends Controller
         ]);
 
         return "Autor Inserido com Sucesso!";
+    }
+
+    public function show($id)
+    {
+        $autor = Autor::findOrFail($id);
+        return view('autores.show', ['autor' => $autor]);
     }
 }

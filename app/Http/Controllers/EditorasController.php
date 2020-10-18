@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Editora;
 
 class EditorasController extends Controller
 {
@@ -18,5 +19,11 @@ class EditorasController extends Controller
         ]);
 
         return "Editora Inserida com Sucesso!";
+    }
+
+    public function show($id)
+    {
+        $editora = Editora::findOrFail($id);
+        return view('editoras.show', ['editora' => $editora]);
     }
 }
