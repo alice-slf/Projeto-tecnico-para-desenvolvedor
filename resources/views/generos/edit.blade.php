@@ -7,7 +7,7 @@
     <tittle>Genero</titlle>
 </head>
 <body>
-    <form action="" method = "POST">
+    <form action="{{ route('editar_genero', ['id' => $genero->id]) }}" method = "POST">
         @csrf
         <label for = "">Nome</label><br />
         <input type = "text" name = "nome" value = "{{ $genero->nome}}"><br />

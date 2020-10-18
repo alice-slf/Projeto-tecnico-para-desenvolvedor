@@ -7,7 +7,8 @@
     <tittle>Autor</titlle>
 </head>
 <body>
-    <form action="" method = "POST">
+    <form action="{{ route('editar_autor', ['id' => $autor->id]) }}" method = "POST">
+        @csrf
         <label for = "">Nome</label><br />
         <input type = "text" name = "nome" value = "{{ $autor->nome }}"><br />
 

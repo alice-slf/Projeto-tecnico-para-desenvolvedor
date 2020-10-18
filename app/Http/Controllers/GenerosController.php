@@ -32,4 +32,14 @@ class GenerosController extends Controller
         $genero = Genero::findOrFail($id);
         return view('generos.edit', ['genero' => $genero]);
     }
+
+    public function update(Request $request, $id)
+    {
+        $genero = Genero::findOrFail($id);
+        $genero->update([
+            'nome' => $request->genero,
+        ]);
+
+        return "Genero Alterado com Sucesso!";
+    }
 }

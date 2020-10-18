@@ -32,4 +32,14 @@ class EditorasController extends Controller
         $editora = Editora::findOrFail($id);
         return view('editoras.edit', ['editora' => $editora]);
     }
+
+    public function update(Request $request, $id)
+    {
+        $editora = Editora::findOrFail($id);
+        $editora->update([
+            'nome' => $request->nome,
+        ]);
+
+        return "Editora Alterada com Sucesso!";
+    }
 }

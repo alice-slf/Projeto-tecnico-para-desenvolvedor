@@ -6,7 +6,7 @@
     <tittle>Livro</titlle>
 </head>
 <body>
-    <form action="" method = "POST">
+    <form action="{{ route('editar_livro', ['id' => $livro->id]) }}" method = "POST">
         @csrf
         <label for = "">Autor</label><br />
         <input type = "text" name = "autor" value = "{{ $livro->autor}}"><br />

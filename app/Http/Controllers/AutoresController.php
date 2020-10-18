@@ -35,4 +35,19 @@ class AutoresController extends Controller
         $autor = Autor::findOrFail($id);
         return view('autores.edit', ['autor' => $autor]);
     }
+
+    public function update(Request $request, $id)
+    {
+        $autor = Autor::findOrFail($id);
+
+        $autor->update([
+            'nome' => $request->nome,
+            'ano_Nasc' => $request->ano_Nasc,
+            'sexo' => $request->sexo,
+            'nacionalidade' => $request->nacionalidade,
+        ]);
+
+        return "Autor Alterado com Sucesso!";
+    }
+
 }

@@ -7,7 +7,7 @@
     <tittle>Editora</titlle>
 </head>
 <body>
-    <form action="" method = "POST">
+    <form action="{{ route('editar_editora', ['id' => $editora->id]) }}" method = "POST">
         @csrf
         <label for = "">Nome</label><br />
         <input type = "text" name = "nome" value = "{{ $editora-> nome}}"><br />
