@@ -20,16 +20,20 @@ Route::get('/', function () {
 Route::get('/editoras/cadastro', 'EditorasController@create');
 Route::post('/editoras/cadastro', 'EditorasController@store')->name('registrar_editora');
 Route::get('/editoras/ver/{id}', 'EditorasController@show');
+Route::get('/editoras/editar/{id}', 'EditorasController@edit');
 
 Route::get('/generos/cadastro', 'GenerosController@create');
 Route::post('/generos/cadastro', 'GenerosController@store')->name('registrar_genero');
 Route::get('/generos/ver/{id}', 'GenerosController@show');
+Route::get('/generos/editar/{id}', 'GenerosController@edit');
 
 Route::get('/autores/cadastro', 'AutoresController@create');
 Route::post('/autores/cadastro', 'AutoresController@store')->name('registrar_autor');
 Route::get('/autores/ver/{id}', 'AutoresController@show');
+Route::get('/autores/editar/{id}', 'AutoresController@edit');
 
 Route::get('/livros/cadastro', 'LivrosController@create');
 Route::post('/livros/cadastro', 'LivrosController@store')->name('registrar_livro');
 Route::get('/livros/ver/{id}', 'LivrosController@show');
+Route::get('/livros/editar/{id}', 'LivrosController@edit');
 

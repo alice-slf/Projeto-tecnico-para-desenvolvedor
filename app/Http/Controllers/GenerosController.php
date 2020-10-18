@@ -26,4 +26,10 @@ class GenerosController extends Controller
         $genero = Genero::findOrFail($id);
         return view('generos.show', ['genero' => $genero]);
     }
+
+    public function edit($id)
+    {
+        $genero = Genero::findOrFail($id);
+        return view('generos.edit', ['genero' => $genero]);
+    }
 }

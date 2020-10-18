@@ -29,4 +29,10 @@ class AutoresController extends Controller
         $autor = Autor::findOrFail($id);
         return view('autores.show', ['autor' => $autor]);
     }
+
+    public function edit($id)
+    {
+        $autor = Autor::findOrFail($id);
+        return view('autores.edit', ['autor' => $autor]);
+    }
 }

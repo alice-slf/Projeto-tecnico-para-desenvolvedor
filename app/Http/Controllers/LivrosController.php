@@ -24,4 +24,16 @@ class LivrosController extends Controller
 
         return "Livro Inserido com Sucesso!";
     }
+
+    public function show($id)
+    {
+        $livro = Livro::findOrFail($id);
+        return view('livros.show', ['livro' => $livro]);
+    }
+
+    public function edit($id)
+    {
+        $livro = Livro::findOrFail($id);
+        return view('livros.edit', ['livro' => $livro]);
+    }
 }
