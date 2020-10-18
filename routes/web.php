@@ -20,3 +20,6 @@ Route::get('/', function () {
 Route::get('/editoras', 'EditorasController@create');
 Route::post('/editoras', 'EditorasController@store')->name('registrar_editora');
 
+Route::get('/generos', 'GenerosController@create');
+Route::post('/generos', 'GenerosController@store')->name('registrar_genero');
+
