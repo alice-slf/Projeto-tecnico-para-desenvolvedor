@@ -21,6 +21,10 @@
         </style>
     </head>
     <body class="antialiased">
-        <h1>oi Eric, a Alice criou essa pagina so pra dizer que te ama</h1>
+        <h1>
+            Quem ama mais, o Eric ou a Alice?
+        </h1><br />
+        <h3>( )Eric</h3><br />
+        <h3>(x)Alice</h3><br />
     </body>
 </html>

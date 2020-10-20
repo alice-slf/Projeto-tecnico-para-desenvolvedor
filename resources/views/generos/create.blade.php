@@ -10,7 +10,7 @@
     <form action="{{ route('registrar_genero') }}" method = "POST">
         @csrf
         <label for = "">Nome</label><br />
-        <input type = "text" name = "nome"><br />
+        <input type = "text" name = "genero"><br />
 
         <button>SALVAR</button>
     </form>

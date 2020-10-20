@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Genero;
+use App\Models\Genero;
 
 class GenerosController extends Controller
 {
@@ -14,8 +14,8 @@ class GenerosController extends Controller
 
     public function store(Request $request)
     {
-        Generos::create([
-            'nome' => $request->genero,
+        Genero::create([
+            'genero' => $request->genero,
         ]);
 
         return "Genero Inserido com Sucesso!";
@@ -37,7 +37,7 @@ class GenerosController extends Controller
     {
         $genero = Genero::findOrFail($id);
         $genero->update([
-            'nome' => $request->genero,
+            'genero' => $request->genero,
         ]);
 
         return "Genero Alterado com Sucesso!";

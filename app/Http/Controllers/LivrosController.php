@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Livro;
+use App\Models\Livro;
 
 class LivrosController extends Controller
 {
@@ -14,7 +14,7 @@ class LivrosController extends Controller
 
     public function store(Request $request)
     {
-        Livros::create([
+        Livro::create([
             'autor' => $request->autor,
             'genero_Literario' => $request->genero_Literario,
             'editora' => $request->editora,

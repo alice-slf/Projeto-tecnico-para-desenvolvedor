@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Autor;
+use App\Models\Autor;
 
 class AutoresController extends Controller
 {
@@ -14,7 +14,7 @@ class AutoresController extends Controller
 
     public function store(Request $request)
     {
-        Autores::create([
+        Autor::create([
             'nome' => $request->nome,
             'ano_Nasc' => $request->ano_Nasc,
             'sexo' => $request->sexo,

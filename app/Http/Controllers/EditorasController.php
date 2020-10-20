@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Editora;
+use App\Models\Editora;
 
 class EditorasController extends Controller
 {
@@ -14,7 +14,7 @@ class EditorasController extends Controller
 
     public function store(Request $request)
     {
-        Editoras::create([
+        Editora::create([
             'nome' => $request->nome,
         ]);
 
