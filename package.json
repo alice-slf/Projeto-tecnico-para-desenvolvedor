@@ -14,10 +14,19 @@
         "cross-env": "^7.0",
         "laravel-mix": "^5.0.1",
         "lodash": "^4.17.19",
+<<<<<<< HEAD
         "resolve-url-loader": "^3.1.0",
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+=======
+        "resolve-url-loader": "^3.1.0"
+    },
+    "dependencies": {
+        "bootstrap": "^4.5.3",
+        "jquery": "^3.5.1",
+        "popper.js": "^1.16.1",
+>>>>>>> 7ead3995cd820d68d9d00630597065aba70502cd
         "vue-axios": "^3.1.1",
         "vue-router": "^3.4.7"
     }
