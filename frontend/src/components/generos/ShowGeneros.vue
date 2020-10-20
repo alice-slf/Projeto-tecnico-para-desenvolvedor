@@ -1,0 +1,9 @@
+<template>
+<form>
+    <div class="form-group">
+        <label class="font-weight-bold">Gênero Literário</label><br />
+        <input type="text" class="shadow-sm p-3 mb-5 bg-white rounded">
+    </div>
+</form>
+
+</template>>
